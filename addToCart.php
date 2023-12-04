@@ -43,7 +43,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['productId'], $_POST['
         updateProductQuantity(get_db_connection(), $productId, $newQuantity);
 
         // You can add more logic here, such as inserting into a cart table
-        echo "Added to Cart successfully.";
+      <script>
+function goBack() {
+    // Use the browser's history object to go back
+    window.history.back();
+}
+</script>
     } else {
         // Handle the case where the product is not found or an error occurred
         echo "Product not found or an error occurred.";
