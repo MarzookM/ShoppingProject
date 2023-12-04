@@ -27,9 +27,6 @@
                             </div>
                         </div>
                     </td>
-                    <td><?php echo $Products['ProductQuantity']; ?></td>
-                    <td><?php echo $Products['ProductCart']; ?></td>
-                    <td><button class="btn btn-primary">Add to Cart</button></td>
                 </tr>
             <?php
             }
