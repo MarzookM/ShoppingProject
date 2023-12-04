@@ -1,36 +1,48 @@
-<h1>Product</h1>
-<div class = "table-responsive">
-  <table class="table">
-    <thead>
-      <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th>Price</th>
-      <th>Quantity</th>
-      <th>Cart</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-<?php                 //from control page
-while($Products = $Product ->fetch_assoc())
-  {
-?>
-<tr> 
-  <td><?php echo $Products['ProductID']; ?></td>
-  <td><?php echo $Products['ProductName']; ?></td>  
-  <td><?php echo $Products['ProductPrice']; ?></td>
-  <td><?php echo $Products['ProductQuantity']; ?></td>  
-  <td><?php echo $Products['ProductCart']; ?></td>
- 
-</tr>
-<?php
-    
-  }
-?>
-      
-    </tbody>
-
-
-      
-    </thead>
+<h1>Products</h1>
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Cart</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            // Assuming $Product is your fetched result from the control page
+            while ($Products = $Product->fetch_assoc()) {
+            ?>
+                <tr>
+                    <td><?php echo $Products['ProductID']; ?></td>
+                    <td>
+                        <div class="card">
+                            <img src="path_to_your_images/<?php echo $Products['ProductName']; ?>.jpg" class="card-img-top" alt="Product Image">
+                            <div class="card-body">
+                                <h5 class="card-title"><?php echo $Products['ProductName']; ?></h5>
+                                <p class="card-text">Price: $<?php echo $Products['ProductPrice']; ?></p>
+                                <div class="form-group">
+                                    <label for="quantity">Quantity:</label>
+                                    <select class="form-control" name="quantity">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <!-- Add more options as needed -->
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td><?php echo $Products['ProductQuantity']; ?></td>
+                    <td><?php echo $Products['ProductCart']; ?></td>
+                    <td><button class="btn btn-primary">Add to Cart</button></td>
+                </tr>
+            <?php
+            }
+            ?>
+        </tbody>
+    </table>
+</div>
