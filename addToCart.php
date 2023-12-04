@@ -1,7 +1,28 @@
-// Function to update the quantity and cart status of a product
-function updateProductDetails($conn, $productId, $newQuantity, $newCartStatus)
+<?php
+include("util-db.php");
+
+// Function to fetch the current quantity of a product
+function getCurrentQuantity($conn, $productId)
 {
-    $updateQuery = "UPDATE Product SET ProductQuantity = $newQuantity, ProductCart = '$newCartStatus' WHERE ProductID = $productId";
+    $fetchQuery = "SELECT ProductQuantity FROM Product WHERE ProductID = $productId";
+    $result = mysqli_query($conn, $fetchQuery);
+
+    if (!$result) {
+        die("Query failed: " . mysqli_error($conn));
+    }
+
+    if (mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result);
+        return $row['ProductQuantity'];
+    } else {
+        return false;
+    }
+}
+
+// Function to update the quantity of a product
+function updateProductQuantity($conn, $productId, $newQuantity)
+{
+    $updateQuery = "UPDATE Product SET ProductQuantity = $newQuantity WHERE ProductID = $productId";
     mysqli_query($conn, $updateQuery);
 }
 
@@ -10,18 +31,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['productId'], $_POST['
     $productId = $_POST['productId'];
     $quantityToAdd = $_POST['quantity'];
 
-    // Fetch the current quantity and cart status from the database
-    $productDetails = getProductDetails(get_db_connection(), $productId);
+    // Fetch the current quantity from the database
+    $currentQuantity = getCurrentQuantity(get_db_connection(), $productId);
 
-    if ($productDetails !== false) {
+    if ($currentQuantity !== false) {
         // Calculate the new quantity
-        $newQuantity = $productDetails['ProductQuantity'] + $quantityToAdd;
+        $newQuantity = $currentQuantity + $quantityToAdd;
 
-        // Set the new cart status
-        $newCartStatus = 'y';
-
-        // Update the quantity and cart status in the database
-        updateProductDetails(get_db_connection(), $productId, $newQuantity, $newCartStatus);
+        // Update the quantity in the database
+        updateProductQuantity(get_db_connection(), $productId, $newQuantity);
 
         // You can add more logic here, such as inserting into a cart table
         echo "Added to Cart successfully.";
@@ -37,3 +55,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['productId'], $_POST['
     // Invalid request
     echo "Invalid request.";
 }
+?>
