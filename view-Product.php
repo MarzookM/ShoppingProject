@@ -1,4 +1,13 @@
-   <tr>
+<h1>Products</h1>
+<div class="table-responsive">
+    <table class="table">
+        
+        <tbody>
+            <?php
+            // Assuming $Product is your fetched result from the control page
+            while ($Products = $Product->fetch_assoc()) {
+            ?>
+                <tr>
                     <td>
                         <div class="card">
                             <img src="path_to_your_images/<?php echo $Products['ProductName']; ?>.jpg" class="card-img-top" alt="Product Image">
