@@ -1,32 +1,8 @@
-<h1>Products</h1>
-<div class="table-responsive">
-    <table class="table">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>Cart</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-            // Assuming $Product is your fetched result from the control page
-            while ($Products = $Product->fetch_assoc()) {
-            ?>
-                <tr>
-                    <td><?php echo $Products['ProductID']; ?></td>
+   <tr>
                     <td>
                         <div class="card">
-                            <?php
-                            // Assuming you have a function getImageDataFromBlob to fetch image data
-                            $imageData = getImageDataFromBlob($Products['ProductImage']);
-                            $base64Image = base64_encode($imageData);
-                            $imgSrc = "data:image/jpeg;base64," . $base64Image;
-                            ?>
-                            <img src="<?php echo $imgSrc; ?>" class="card-img-top" alt="Product Image">
+                            <img src="path_to_your_images/<?php echo $Products['ProductName']; ?>.jpg" class="card-img-top" alt="Product Image">
+                            <img src="pineapple.jpg/<?php echo $Products['ProductName']; ?>.jpg" class="card-img-top" alt="Product Image">
                             <div class="card-body">
                                 <h5 class="card-title"><?php echo $Products['ProductName']; ?></h5>
                                 <p class="card-text">Price: $<?php echo $Products['ProductPrice']; ?></p>
@@ -42,9 +18,6 @@
                             </div>
                         </div>
                     </td>
-                    <td><?php echo $Products['ProductQuantity']; ?></td>
-                    <td><?php echo $Products['ProductCart']; ?></td>
-                    <td><button class="btn btn-primary">Add to Cart</button></td>
                 </tr>
             <?php
             }
