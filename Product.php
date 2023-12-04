@@ -1,5 +1,5 @@
 <?php
-
+require_once("util-db.php");
 require_once("model-Product.php");
 $pageTitle = "Customer";
 include "view-header.php";
