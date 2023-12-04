@@ -10,8 +10,8 @@
                 <tr>
                     <td>
                         <div class="card">
-                            <img src="path_to_your_images/<?php echo $Products['ProductName']; ?>.jpg" class="card-img-top" alt="Product Image">
-                            <img src="pineapple.jpg/<?php echo $Products['ProductName']; ?>.jpg" class="card-img-top" alt="Product Image">
+                            <?php echo '<img src="data:image;base64,'.base64_encode($row{['ProductImage']).'" alt="Image" Style ="width:100px; height:100px;">';?>
+            
                             <div class="card-body">
                                 <h5 class="card-title"><?php echo $Products['ProductName']; ?></h5>
                                 <p class="card-text">Price: $<?php echo $Products['ProductPrice']; ?></p>
