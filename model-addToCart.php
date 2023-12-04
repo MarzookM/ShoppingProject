@@ -4,7 +4,7 @@
 include("util-db.php");
 
 // Function to fetch the current quantity of a product
-function getCurrentQuantity($connn, $productId)
+function getCurrentQuantity($conn, $productId)
 {
     $fetchQuery = "SELECT ProductQuantity FROM Product WHERE ProductID = $productId";
     $result = mysqli_query($conn, $fetchQuery);
