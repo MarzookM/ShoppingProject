@@ -13,15 +13,19 @@
                             <div class="card-body">
                                 <h5 class="card-title"><?php echo $Products['ProductName']; ?></h5>
                                 <p class="card-text">Price: $<?php echo $Products['ProductPrice']; ?></p>
-                                <div class="form-group">
+                                <form action="addToCart.php" method="POST">
+                                    <input type="hidden" name="productId" value="<?php echo $Products['ProductID']; ?>">
                                     <label for="quantity">Quantity:</label>
                                     <select class="form-control" name="quantity">
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <!-- Add more options as needed -->
+                                        <?php
+                                        // Display dropdown options based on the current quantity
+                                        for ($i = 1; $i <= $Products['ProductQuantity']; $i++) {
+                                            echo "<option value=\"$i\">$i</option>";
+                                        }
+                                        ?>
                                     </select>
-                                </div>
+                                    <button type="submit" class="btn btn-primary">Add to Cart</button>
+                                </form>
                             </div>
                         </div>
                     </td>
