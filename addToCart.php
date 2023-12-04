@@ -43,8 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['productId'], $_POST['
 
         // You can add more logic here, such as inserting into a cart table
         echo '<script>
-                function goBack() {
-                    // Use the browser\'s history object to go back
+                function goBack()
                     window.history.back();
                 }
               </script>';
