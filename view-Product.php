@@ -8,7 +8,6 @@
             while ($Products = $Product->fetch_assoc()) {
             ?>
                 <tr>
-                    <td><?php echo $Products['ProductID']; ?></td>
                     <td>
                         <div class="card">
                             <img src="path_to_your_images/<?php echo $Products['ProductName']; ?>.jpg" class="card-img-top" alt="Product Image">
