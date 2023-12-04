@@ -1,16 +1,7 @@
 <h1>Products</h1>
 <div class="table-responsive">
     <table class="table">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>Cart</th>
-                <th>Action</th>
-            </tr>
-        </thead>
+        
         <tbody>
             <?php
             // Assuming $Product is your fetched result from the control page
