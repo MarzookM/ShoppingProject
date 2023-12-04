@@ -1,7 +1,7 @@
 <?php
 
 // Include the file with your database connection logic
-include("connect.php");
+include("util-db.php");
 
 // Function to fetch the current quantity of a product
 function getCurrentQuantity($con, $productId)
