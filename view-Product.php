@@ -10,7 +10,7 @@
                 <tr>
                     <td>
                         <div class="card">
-                            <?php echo '<img src="data:image;base64,'.base64_encode($row{['ProductImage']).'" alt="Image" Style ="width:100px; height:100px;">';?>
+                            <?php echo '<img src="data:image;base64,'.base64_encode($row['ProductImage']).'" alt="Image" Style ="width:100px; height:100px;">';?>
             
                             <div class="card-body">
                                 <h5 class="card-title"><?php echo $Products['ProductName']; ?></h5>
