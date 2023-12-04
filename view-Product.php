@@ -7,9 +7,9 @@
         while ($Products = $Product->fetch_assoc()) {
         ?>
             <div class="carousel-item <?php echo ($firstCard) ? 'active' : ''; ?>">
-                <div class="card">
+                <div class="card" style="width: 200px; height: 300px;"> <!-- Adjust width and height as needed -->
                     <?php echo '<img src="data:image;base64,' . base64_encode($Products['ProductImage']) . '" alt="Product Image" class="card-img-top">'; ?>
-                    <div class="card-body" style="height: 200px;"> <!-- Adjust the height as needed -->
+                    <div class="card-body" style="height: 100px;"> <!-- Adjust height as needed -->
                         <h5 class="card-title"><?php echo $Products['ProductName']; ?></h5>
                         <p class="card-text">Price: $<?php echo $Products['ProductPrice']; ?></p>
                         <form action="addToCart.php" method="POST">
