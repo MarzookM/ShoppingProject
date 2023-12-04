@@ -1,5 +1,5 @@
 <h1>Products</h1>
-<div id="productCarousel" class="carousel slide" data-ride="carousel">
+<div id="productCarousel" class="carousel slide" data-ride="carousel" style="width: 80%; margin: auto;">
     <div class="carousel-inner">
         <?php
         // Assuming $Product is your fetched result from the control page
@@ -7,7 +7,7 @@
         while ($Products = $Product->fetch_assoc()) {
         ?>
             <div class="carousel-item <?php echo ($firstCard) ? 'active' : ''; ?>">
-                <div class="card" style="width: 200px; height: 300px;"> <!-- Adjust width and height as needed -->
+                <div class="card" style="width: 200px; height: 300px; margin: auto;"> <!-- Adjust width and height as needed -->
                     <?php echo '<img src="data:image;base64,' . base64_encode($Products['ProductImage']) . '" alt="Product Image" class="card-img-top">'; ?>
                     <div class="card-body" style="height: 100px;"> <!-- Adjust height as needed -->
                         <h5 class="card-title"><?php echo $Products['ProductName']; ?></h5>
