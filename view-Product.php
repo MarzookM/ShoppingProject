@@ -6,6 +6,8 @@
       <th>ID</th>
       <th>Name</th>
       <th>Price</th>
+      <th>Quantity</th>
+      <th>Cart</th>
         <th></th>
       </tr>
     </thead>
