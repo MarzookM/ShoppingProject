@@ -13,6 +13,8 @@
 
     .card {
         width: 100%;
+        background-color: black; /* Set card background color */
+        color: white; /* Set card text color */
     }
 
     .card-img-top {
@@ -23,6 +25,11 @@
 
     .card-body {
         height: 100px; /* Set your preferred height */
+    }
+
+    /* Style the button inside the card */
+    .btn-primary {
+        width: 100%;
     }
 </style>
 <div class="row">
