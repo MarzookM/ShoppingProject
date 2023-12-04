@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['productId'], $_POST['quantity'])) {
     // Assuming you have a database connection named $con
-    include("connect.php");
+    include("util-db.php");
 
     $productId = $_POST['productId'];
     $quantity = $_POST['quantity'];
