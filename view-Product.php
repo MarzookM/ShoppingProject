@@ -1,7 +1,6 @@
 <h1>Products</h1>
 <div class="table-responsive">
     <table class="table">
-        
         <tbody>
             <?php
             // Assuming $Product is your fetched result from the control page
@@ -10,8 +9,7 @@
                 <tr>
                     <td>
                         <div class="card">
-                            <?php echo '<img src="data:image;base64,'.base64_encode($row['ProductImage']).'" alt="Image" Style ="width:100px; height:100px;">';?>
-            
+                            <?php echo '<img src="data:image;base64,' . base64_encode($Products['ProductImage']) . '" alt="Product Image" style="width:100px; height:100px;">'; ?>
                             <div class="card-body">
                                 <h5 class="card-title"><?php echo $Products['ProductName']; ?></h5>
                                 <p class="card-text">Price: $<?php echo $Products['ProductPrice']; ?></p>
