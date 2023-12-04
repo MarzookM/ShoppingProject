@@ -1,62 +1,39 @@
 <h1>Products</h1>
 <style>
-    .row {
+    .card-container {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
-    }
-
-    .col-md-4 {
-        flex: 0 0 30%; /* Adjust the width as needed */
-        margin: 10px; /* Add margin between cards */
+        gap: 20px;
+        justify-content: space-around; /* or justify-content: space-between; */
     }
 
     .card {
-        width: 100%;
-        background-color: black; /* Set card background color */
-        color: white; /* Set card text color */
-    }
-
-    .card-img-top {
-        width: 100%;
-        height: 150px; /* Set your preferred height */
-        object-fit: cover;
-    }
-
-    .card-body {
-        height: 100px; /* Set your preferred height */
-    }
-
-    /* Style the button inside the card */
-    .btn-primary {
-        width: 100%;
+        width: 300px; /* Adjust width as needed */
     }
 </style>
-<div class="row">
+<div class="card-container">
     <?php
     // Assuming $Product is your fetched result from the control page
     while ($Products = $Product->fetch_assoc()) {
     ?>
-        <div class="col-md-4">
-            <div class="card">
-                <?php echo '<img src="data:image;base64,' . base64_encode($Products['ProductImage']) . '" alt="Product Image" class="card-img-top">'; ?>
-                <div class="card-body">
-                    <h5 class="card-title"><?php echo $Products['ProductName']; ?></h5>
-                    <p class="card-text">Price: $<?php echo $Products['ProductPrice']; ?></p>
-                    <form action="addToCart.php" method="POST">
-                        <input type="hidden" name="productId" value="<?php echo $Products['ProductID']; ?>">
-                        <label for="quantity">Quantity:</label>
-                        <select class="form-control" name="quantity">
-                            <?php
-                            // Display dropdown options from 0 to 10
-                            for ($i = 0; $i <= 10; $i++) {
-                                echo "<option value=\"$i\">$i</option>";
-                            }
-                            ?>
-                        </select>
-                        <button type="submit" class="btn btn-primary">Add to Cart</button>
-                    </form>
-                </div>
+        <div class="card">
+            <?php echo '<img src="data:image;base64,' . base64_encode($Products['ProductImage']) . '" alt="Product Image" class="card-img-top">'; ?>
+            <div class="card-body">
+                <h5 class="card-title"><?php echo $Products['ProductName']; ?></h5>
+                <p class="card-text">Price: $<?php echo $Products['ProductPrice']; ?></p>
+                <form action="addToCart.php" method="POST">
+                    <input type="hidden" name="productId" value="<?php echo $Products['ProductID']; ?>">
+                    <label for="quantity">Quantity:</label>
+                    <select class="form-control" name="quantity">
+                        <?php
+                        // Display dropdown options from 0 to 10
+                        for ($i = 0; $i <= 10; $i++) {
+                            echo "<option value=\"$i\">$i</option>";
+                        }
+                        ?>
+                    </select>
+                    <button type="submit" class="btn btn-primary">Add to Cart</button>
+                </form>
             </div>
         </div>
     <?php
