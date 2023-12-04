@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['productId'], $_POST['
 
     // Fetch the current quantity from the database
     $fetchQuery = "SELECT ProductQuantity FROM Product WHERE ProductID = $productId";
-    $result = mysqli_query($conn, $fetchQuery);
+    $result = mysqli_query($con, $fetchQuery);
 
     if ($result && mysqli_num_rows($result) > 0) {
         $row = mysqli_fetch_assoc($result);
@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['productId'], $_POST['
 
         // Update the quantity in the database
         $updateQuery = "UPDATE Product SET ProductQuantity = $newQuantity WHERE ProductID = $productId";
-        mysqli_query($conn, $updateQuery);
+        mysqli_query($con, $updateQuery);
 
         // You can add more logic here, such as inserting into a cart table
         echo "Added to Cart successfully.";
