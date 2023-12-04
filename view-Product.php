@@ -19,7 +19,7 @@
                                     <select class="form-control" name="quantity">
                                         <?php
                                         // Display dropdown options from 0 to 10
-                                        for ($i = 0; $i <= 10; $i++) {
+                                        for ($i = -1; $i <= 10; $i++) {
                                             echo "<option value=\"$i\">$i</option>";
                                         }
                                         ?>
