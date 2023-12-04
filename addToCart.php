@@ -26,6 +26,14 @@ function updateProductQuantity($conn, $productId, $newQuantity)
     mysqli_query($conn, $updateQuery);
 }
 
+// Function to update the cart status of a product
+function updateProductCartStatus($conn, $productId, $newCartStatus)
+{
+    // Assuming ProductCart is a column in a separate table
+    $updateQuery = "UPDATE CartTable SET ProductCart = '$newCartStatus' WHERE ProductID = $productId";
+    mysqli_query($conn, $updateQuery);
+}
+
 // Check if the request method is POST and required parameters are set
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['productId'], $_POST['quantity'])) {
     $productId = $_POST['productId'];
@@ -40,6 +48,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['productId'], $_POST['
 
         // Update the quantity in the database
         updateProductQuantity(get_db_connection(), $productId, $newQuantity);
+
+        // Set the new cart status (assuming ProductCart is a column in a separate table)
+        $newCartStatus = 'y';
+
+        // Update the cart status in the database
+        updateProductCartStatus(get_db_connection(), $productId, $newCartStatus);
 
         // You can add more logic here, such as inserting into a cart table
         echo "Added to Cart successfully.";
