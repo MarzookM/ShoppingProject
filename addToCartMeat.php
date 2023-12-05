@@ -4,7 +4,7 @@ include("util-db.php");
 // Function to fetch the current quantity and cart status of a ProductMeat
 function getProductMeatDetails($conn, $ProductMeatId)
 {
-    $fetchQuery = "SELECT ProductMeatQuantity, ProductMeatCart FROM ProductMeat WHERE ProductMeatID = $ProductMeatId";
+    $fetchQuery = "SELECT ProductMeatQuantitiy, ProductMeatCart FROM ProductMeat WHERE ProductMeatID = $ProductMeatId";
     $result = mysqli_query($conn, $fetchQuery);
 
     if (!$result) {
@@ -22,7 +22,7 @@ function getProductMeatDetails($conn, $ProductMeatId)
 // Function to update the quantity and cart status of a ProductMeat
 function updateProductMeatDetails($conn, $ProductMeatId, $newQuantity, $newCartStatus)
 {
-    $updateQuery = "UPDATE ProductMeat SET ProductMeatQuantity = $newQuantity, ProductMeatCart = '$newCartStatus' WHERE ProductMeatID = $ProductMeatId";
+    $updateQuery = "UPDATE ProductMeat SET ProductMeatQuantitiy = $newQuantity, ProductMeatCart = '$newCartStatus' WHERE ProductMeatID = $ProductMeatId";
     mysqli_query($conn, $updateQuery);
 }
 
@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ProductMeat'], $_POST
 
     if ($ProductMeatDetails !== false) {
         // Calculate the new quantity
-        $newQuantity = $ProductMeatDetails['ProductMeatQuantity'] + $quantityToAdd;
+        $newQuantity = $ProductMeatDetails['ProductMeatQuantitiy'] + $quantityToAdd;
 
         // Set the new cart status
         $newCartStatus = 'y';
