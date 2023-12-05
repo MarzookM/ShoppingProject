@@ -49,10 +49,6 @@ include "view-Customer-editform.php";
     </form>
   </td>
   <td>
-    <form method ="post" action="Store-with-Customers.php">
-         <input type="hidden" name="cid" value=<?php echo $Customers['CustomerID']; ?>">
-          <button type="submit" class="btn btn-primary">Customers</button>
-    </form>
   </td>
 
 </tr>
