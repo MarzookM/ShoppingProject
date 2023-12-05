@@ -23,19 +23,6 @@ function selectCartProducts(){
         throw $e;
     }
 }
-
-function updateCartProductQuantity($productId, $newQuantity)
-{
-    try {
-        $conn = get_db_connection();
-        $stmt = $conn->prepare("UPDATE Product SET ProductQuantity = ? WHERE ProductID = ?");
-        $stmt->bind_param("ii", $newQuantity, $productId);
-        $success = $stmt->execute();
-        $conn->close();
-        return $success;
-    } catch (Exception $e) {
-        $conn->close();
-        throw $e;
-    }
-}
 ?>
+
+
