@@ -1,9 +1,9 @@
 <?php
 require_once("util-db.php");
-require_once("model-cart.php"); // going to create 
+require_once("model-cart.php");
 $pageTitle = "Customer";
 include "view-header.php";
-$Cart = selectCart();
-include "view-cart.php"; //going to create
+$CartProduct = selectCartProducts();
+include "view-cart.php";
 include "view-footer.php";
-?> 
+?>
