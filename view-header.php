@@ -20,26 +20,14 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="index.php">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="ProductBread.php">Grains</a>
-        </li>
+      
         <li class="nav-item">
           <a class="nav-link" href="Product.php">Product</a>
         </li>
-           <li class="nav-item">
-          <a class="nav-link" href="ProductDrink.php">Drinks</a>
-        </li>  
-         </li>
-          <li class="nav-item">
-         <a class="nav-link" href="ProductMeat.php">Meat</a>
-        </li>
-         </li>
-          <li class="nav-item">
-         <a class="nav-link" href="ProductProduce.php">Produce</a>
-        </li>  
-          <li class="nav-item">
-          <a class="nav-link active" href="ProductSpice.php">Spices</a>
-        </li>
+         
+       
+        
+          
           </li>  
           <li class="nav-item">
           <a class="nav-link active" href="cart.php">Cart</a>
