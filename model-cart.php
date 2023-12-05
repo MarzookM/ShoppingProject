@@ -1,6 +1,4 @@
 <?php
-include("util-db.php");
-
 // Function to fetch cart items for a specific product type
 function getCartItems($productType)
 {
@@ -10,7 +8,7 @@ function getCartItems($productType)
     $result = mysqli_query(get_db_connection(), $query);
 
     if (!$result) {
-        die("Query failed: " . mysqli_error(get_db_connection()));
+        die("Query failed: " . mysqli_error(get_db_connection()) . "<br>Query: " . $query);
     }
 
     return $result;
