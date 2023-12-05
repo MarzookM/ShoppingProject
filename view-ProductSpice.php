@@ -23,7 +23,7 @@
                 <p class="card-text">Price: $<?php echo $ProductSpices['ProductSpicePrice']; ?></p>
                 <form action="addToCartSpice.php" method="POST">
                     <input type="hidden" name="ProductSpice" value="<?php echo $ProductSpices['ProductSpiceID']; ?>">
-                    <label for="quantitiy">Quantity:</label>
+                    <label for="quantity">Quantity:</label>
                     <select class="form-control" name="quantitiy">
                         <?php
                         // Display dropdown options from 0 to 10
