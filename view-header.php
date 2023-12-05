@@ -10,12 +10,12 @@
       background-color: darkblue;
       color: yellow;
       text-align: center;
-      padding: 15px 0;
+      padding: 30px 0;
     }
 
     .small-nav-bar {
       background-color: grey;
-      padding: 10px 0;
+      padding: 20px 0;
     }
 
     .big-nav-bar a,
@@ -36,7 +36,7 @@
 
     <!-- Big Nav Bar -->
     <div class="big-nav-bar">
-      <span style="font-size: 36px; font-weight: bold;">MIS-MART</span>
+      <span style="font-size: 50px; font-weight: bold;">MIS-MART</span>
       <a href="cart.php" style="float: right; font-size: 18px;">Cart</a>
     </div>
 
