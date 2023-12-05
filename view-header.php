@@ -40,6 +40,10 @@
           <li class="nav-item">
           <a class="nav-link active" href="ProductSpice.php">Spices</a>
         </li>
+          </li>  
+          <li class="nav-item">
+          <a class="nav-link active" href="Cart.php">Cart</a>
+        </li>
       </ul>
     </div>
   </div>
