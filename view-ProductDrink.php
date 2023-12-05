@@ -21,7 +21,7 @@
             <div class="card-body">
                 <h5 class="card-title"><?php echo $ProductDrinks['ProductDrinkName']; ?></h5>
                 <p class="card-text">Price: $<?php echo $ProductDrinks['ProductDrinkPrice']; ?></p>
-                <form action="addToCart.php" method="POST">
+                <form action="addToCartDrink.php" method="POST">
                     <input type="hidden" name="ProductDrink" value="<?php echo $ProductDrinks['ProductDrink']; ?>">
                     <label for="quantity">Quantity:</label>
                     <select class="form-control" name="quantity">
