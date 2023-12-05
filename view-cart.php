@@ -12,6 +12,7 @@
         <tbody>
             <?php
             $totalPrice = 0;
+            $CartProduct->data_seek(0); // Reset pointer to the beginning of the result set
             while ($row = $CartProduct->fetch_assoc()) {
                 $finalPrice = $row['ProductPrice'] * $row['ProductQuantity'];
                 $totalPrice += $finalPrice;
