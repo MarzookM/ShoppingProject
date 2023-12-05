@@ -1,6 +1,6 @@
 <!-- Your HTML form for adding a customer -->
 <!-- Make sure to adjust the form structure based on your requirements -->
-<form method="post" action="">
+<form method="post" action="model-addcustomer.php">
     <div class="mb-3">
         <label for="customerName" class="form-label">Customer Name</label>
         <input type="text" class="form-control" id="customerName" name="customerName" required>
@@ -13,5 +13,5 @@
         <label for="customerPhoneNumber" class="form-label">Customer Phone Number</label>
         <input type="text" class="form-control" id="customerPhoneNumber" name="customerPhoneNumber" required>
     </div>
-    <button type="submit" class="btn btn-primary">Add Customer</button>
+    <button type="submit" class="btn btn-primary" name="addCustomer">Add Customer</button>
 </form>
