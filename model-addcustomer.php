@@ -1,5 +1,4 @@
 <?php
-
 function insertCustomer($customerName, $customerID, $customerPhoneNumber) {
     try {
         $conn = get_db_connection();
@@ -12,4 +11,5 @@ function insertCustomer($customerName, $customerID, $customerPhoneNumber) {
         $conn->close();
         throw $e;
     }
+}
 ?>
