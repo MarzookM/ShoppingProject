@@ -31,7 +31,7 @@
     </table>
 </div>
 
-<!-- Button to go to AddCustomer.php -->
-<div class="mt-4">
-    <a href="AddCustomer.php" class="btn btn-primary">Add Customer</a>
+<!-- Centered "Go to Check Out" button -->
+<div class="d-flex justify-content-center mt-4">
+    <a href="AddCustomer.php" class="btn btn-primary">Go to Check Out</a>
 </div>
