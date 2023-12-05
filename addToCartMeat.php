@@ -4,7 +4,7 @@ include("util-db.php");
 // Function to fetch the current quantity and cart status of a ProductMeat
 function getProductMeatDetails($conn, $ProductMeatId)
 {
-    $fetchQuery = "SELECT ProductMeatQuantitiy, ProductMeatCart FROM ProductMeat WHERE ProductMeatID = $ProductMeatId";
+    $fetchQuery = "SELECT ProductMeatQuantity, ProductMeatCart FROM ProductMeat WHERE ProductMeatID = $ProductMeatId";
     $result = mysqli_query($conn, $fetchQuery);
 
     if (!$result) {
@@ -22,13 +22,13 @@ function getProductMeatDetails($conn, $ProductMeatId)
 // Function to update the quantity and cart status of a ProductMeat
 function updateProductMeatDetails($conn, $ProductMeatId, $newQuantity, $newCartStatus)
 {
-    $updateQuery = "UPDATE ProductMeat SET ProductMeatQuantitiy = $newQuantity, ProductMeatCart = '$newCartStatus' WHERE ProductMeatID = $ProductMeatId";
+    $updateQuery = "UPDATE ProductMeat SET ProductMeatQuantity = $newQuantity, ProductMeatCart = '$newCartStatus' WHERE ProductMeatID = $ProductMeatId";
     mysqli_query($conn, $updateQuery);
 }
 
 // Check if the request method is POST and required parameters are set
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ProductMeat'], $_POST['quantity'])) {
-    $ProductMeatId = $_POST['ProductMeat'];
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ProductMeatId'], $_POST['quantity'])) {
+    $ProductMeatId = $_POST['ProductMeatId'];
     $quantityToAdd = $_POST['quantity'];
 
     // Fetch the current quantity and cart status from the database
@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ProductMeat'], $_POST
 
     if ($ProductMeatDetails !== false) {
         // Calculate the new quantity
-        $newQuantity = $ProductMeatDetails['ProductMeatQuantitiy'] + $quantityToAdd;
+        $newQuantity = $ProductMeatDetails['ProductMeatQuantity'] + $quantityToAdd;
 
         // Set the new cart status
         $newCartStatus = 'y';
