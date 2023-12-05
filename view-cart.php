@@ -22,8 +22,8 @@
                 $totalPrice += $finalPrice; // Accumulate total price
                 ?>
                 <tr>
-                    <td><?php echo $row['ProductID']; ?></td>
                     <td><?php echo $row['ProductName']; ?></td>
+                    <td><?php echo $row['ProductQuantity']; ?></td>
                     <td>
                         <!-- Add the edit form for cart product quantity here -->
                         <?php include "view-cart-editform.php"; ?>
