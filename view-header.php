@@ -37,6 +37,9 @@
           <li class="nav-item">
          <a class="nav-link" href="ProductProduce.php">Produce</a>
         </li>  
+          <li class="nav-item">
+          <a class="nav-link active" href="ProductSpice.php">Spices</a>
+        </li>
       </ul>
     </div>
   </div>
