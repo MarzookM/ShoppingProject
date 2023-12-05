@@ -1,6 +1,6 @@
 <?php
 include("util-db.php");
-include("model-Cart.php");
+include("model-cart.php");
 
 // Get cart items for each product type
 $productTypes = ["ProductBread", "ProductProduce", "ProductDrink", "ProductMeat", "ProductSpice"];
