@@ -22,9 +22,9 @@
                 <h5 class="card-title"><?php echo $ProductMeats['ProductMeatName']; ?></h5>
                 <p class="card-text">Price: $<?php echo $ProductMeats['ProductMeatPrice']; ?></p>
                 <form action="addToCartMeat.php" method="POST">
-                    <input type="hidden" name="ProductMeat" value="<?php echo $ProductMeats['ProductMeatID']; ?>">
-                    <label for="quantitiy">Quantity:</label>
-                    <select class="form-control" name="quantitiy">
+                    <input type="hidden" name="ProductMeatId" value="<?php echo $ProductMeats['ProductMeatID']; ?>">
+                    <label for="quantity">Quantity:</label>
+                    <select class="form-control" name="quantity">
                         <?php
                         // Display dropdown options from 0 to 10
                         for ($i = 0; $i <= 10; $i++) {
