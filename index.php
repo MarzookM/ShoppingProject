@@ -2,7 +2,7 @@
 $pageTitle = "Home";
 include "view-header.php";
 ?> 
-<h1>Homework 3</h1>
+<object data="ou.mp4" width="400" height="300"></object>
 <?php
 include "view-footer.php";
 ?> 
