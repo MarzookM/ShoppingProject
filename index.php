@@ -6,6 +6,7 @@ include "view-header.php";
         body {
             margin: 0;
             overflow: hidden;
+        background-color: black;
         }
 
         video {
