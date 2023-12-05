@@ -54,7 +54,7 @@
 
 <!-- Big Nav Bar -->
 <div class="big-nav-bar">
-    <span style="font-size: 50px; font-weight: bold;">MIS-MART</span>
+    <span style="font-size: 50px; font-weight: bold; left-margin: 15px;">MIS-MART</span>
     <a href="cart.php" style="float: right;">Cart</a>
 </div>
 
