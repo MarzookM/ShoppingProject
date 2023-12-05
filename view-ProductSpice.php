@@ -24,7 +24,7 @@
                 <form action="addToCartSpice.php" method="POST">
                     <input type="hidden" name="ProductSpice" value="<?php echo $ProductSpices['ProductSpiceID']; ?>">
                     <label for="quantity">Quantity:</label>
-                    <select class="form-control" name="quantitiy">
+                    <select class="form-control" name="quantity">
                         <?php
                         // Display dropdown options from 0 to 10
                         for ($i = 0; $i <= 10; $i++) {
