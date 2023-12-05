@@ -1,4 +1,5 @@
 <?php
+require_once("util-db.php");
 include("model-cart.php");
 
 // Fetch cart items for each product type
