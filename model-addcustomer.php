@@ -12,12 +12,6 @@ function insertCustomer($customerName, $customerID, $customerPhoneNumber) {
 
         $conn->close();
 
-        // Redirect to Customers.php after a successful insertion
-        if ($success) {
-            header("Location: Customers.php");
-            exit();
-        }
-
         return $success;
     } catch (Exception $e) {
         $conn->close();
