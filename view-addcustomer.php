@@ -14,5 +14,5 @@
         <input type="text" class="form-control" id="customerPhoneNumber" name="customerPhoneNumber" required>
     </div>
     <button type="submit" class="btn btn-primary">Add Customer</button>
-     <a href="Customers.php" class="btn btn-success" style="float: right;">Next</a>
+     <a href="Customer.php" class="btn btn-success" style="float: right;">Next</a>
 </form>
