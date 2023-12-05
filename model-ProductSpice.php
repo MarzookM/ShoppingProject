@@ -2,7 +2,7 @@
 function selectProductSpice(){
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT `ProductSpice`, `ProductSpiceName`, `ProductSpicePrice`, `ProductSpiceQuantity`, `ProductSpiceCart`, `ProductSpiceImage` FROM `ProductSpice`  "); 
+        $stmt = $conn->prepare("SELECT `ProductSpiceID`, `ProductSpiceName`, `ProductSpicePrice`, `ProductSpiceQuantity`, `ProductSpiceCart`, `ProductSpiceImage` FROM `ProductSpice`  "); 
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
