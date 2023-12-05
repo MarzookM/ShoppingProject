@@ -9,11 +9,11 @@
         </thead>
         <tbody>
             <?php
-            while ($CartProduct = $CartProduct->fetch_assoc()) {
+            while ($row = $CartProduct->fetch_assoc()) {
             ?>
                 <tr>
-                    <td><?php echo $CartProduct['ProductName']; ?></td>
-                    <td><?php echo $CartProduct['ProductQuantity']; ?></td>
+                    <td><?php echo $row['ProductName']; ?></td>
+                    <td><?php echo $row['ProductQuantity']; ?></td>
                 </tr>
             <?php
             }
