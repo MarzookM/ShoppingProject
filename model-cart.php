@@ -1,6 +1,5 @@
 <?php
 
-include("util-db.php");
 
 function getCartData($table, $cartColumn, $quantityColumn)
 {
