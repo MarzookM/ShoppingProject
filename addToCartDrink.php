@@ -2,9 +2,9 @@
 include("util-db.php");
 
 // Function to fetch the current quantity and cart status of a ProductDrink
-function getProductDrinkDetails($conn, $ProductDrinkId)
+function getProductDrinkDetails($conn, $ProductDrink)
 {
-    $fetchQuery = "SELECT ProductDrinkQuantity, ProductDrinkCart FROM ProductDrink WHERE ProductDrinkID = $ProductDrinkId";
+    $fetchQuery = "SELECT ProductDrinkQuantity, ProductDrinkCart FROM ProductDrink WHERE ProductDrink = $ProductDrink";
     $result = mysqli_query($conn, $fetchQuery);
 
     if (!$result) {
@@ -20,19 +20,19 @@ function getProductDrinkDetails($conn, $ProductDrinkId)
 }
 
 // Function to update the quantity and cart status of a ProductDrink
-function updateProductDrinkDetails($conn, $ProductDrinkId, $newQuantity, $newCartStatus)
+function updateProductDrinkDetails($conn, $ProductDrink, $newQuantity, $newCartStatus)
 {
-    $updateQuery = "UPDATE ProductDrink SET ProductDrinkQuantity = $newQuantity, ProductDrinkCart = '$newCartStatus' WHERE ProductDrinkID = $ProductDrinkId";
+    $updateQuery = "UPDATE ProductDrink SET ProductDrinkQuantity = $newQuantity, ProductDrinkCart = '$newCartStatus' WHERE ProductDrink = $ProductDrink";
     mysqli_query($conn, $updateQuery);
 }
 
 // Check if the request method is POST and required parameters are set
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ProductDrinkId'], $_POST['quantity'])) {
-    $ProductDrinkId = $_POST['ProductDrinkId'];
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ProductDrink'], $_POST['quantity'])) {
+    $ProductDrink = $_POST['ProductDrink'];
     $quantityToAdd = $_POST['quantity'];
 
     // Fetch the current quantity and cart status from the database
-    $ProductDrinkDetails = getProductDrinkDetails(get_db_connection(), $ProductDrinkId);
+    $ProductDrinkDetails = getProductDrinkDetails(get_db_connection(), $ProductDrink);
 
     if ($ProductDrinkDetails !== false) {
         // Calculate the new quantity
@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ProductDrinkId'], $_P
         $newCartStatus = 'y';
 
         // Update the quantity and cart status in the database
-        updateProductDrinkDetails(get_db_connection(), $ProductDrinkId, $newQuantity, $newCartStatus);
+        updateProductDrinkDetails(get_db_connection(), $ProductDrink, $newQuantity, $newCartStatus);
 
         // You can add more logic here, such as inserting into a cart table
         echo "Added to Cart successfully.";
@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ProductDrinkId'], $_P
         echo "ProductDrink not found or an error occurred.";
     }
 } else {
-    // Invalid request
-    echo "Invalid request.";
+    // Inval request
+    echo "Inval request.";
 }
 ?>
