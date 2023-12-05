@@ -1,7 +1,7 @@
 <?php
 include("util-db.php");
 
-// Function to fetch the current quantity and cart status of a ProductMeat
+// Function to fetch the current quantitiy and cart status of a ProductMeat
 function getProductMeatDetails($conn, $ProductMeatId)
 {
     $fetchQuery = "SELECT ProductMeatQuantitiy, ProductMeatCart FROM ProductMeat WHERE ProductMeatID = $ProductMeatId";
@@ -19,30 +19,30 @@ function getProductMeatDetails($conn, $ProductMeatId)
     }
 }
 
-// Function to update the quantity and cart status of a ProductMeat
-function updateProductMeatDetails($conn, $ProductMeatId, $newQuantity, $newCartStatus)
+// Function to update the quantitiy and cart status of a ProductMeat
+function updateProductMeatDetails($conn, $ProductMeatId, $newquantitiy, $newCartStatus)
 {
-    $updateQuery = "UPDATE ProductMeat SET ProductMeatQuantitiy = $newQuantity, ProductMeatCart = '$newCartStatus' WHERE ProductMeatID = $ProductMeatId";
+    $updateQuery = "UPDATE ProductMeat SET ProductMeatQuantitiy = $newquantitiy, ProductMeatCart = '$newCartStatus' WHERE ProductMeatID = $ProductMeatId";
     mysqli_query($conn, $updateQuery);
 }
 
 // Check if the request method is POST and required parameters are set
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ProductMeatId'], $_POST['quantity'])) {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ProductMeatId'], $_POST['quantitiy'])) {
     $ProductMeatId = $_POST['ProductMeatId'];
-    $quantityToAdd = $_POST['quantity'];
+    $quantitiyToAdd = $_POST['quantitiy'];
 
-    // Fetch the current quantity and cart status from the database
+    // Fetch the current quantitiy and cart status from the database
     $ProductMeatDetails = getProductMeatDetails(get_db_connection(), $ProductMeatId);
 
     if ($ProductMeatDetails !== false) {
-        // Calculate the new quantity
-        $newQuantity = $ProductMeatDetails['ProductMeatQuantity'] + $quantityToAdd;
+        // Calculate the new quantitiy
+        $newquantitiy = $ProductMeatDetails['ProductMeatquantitiy'] + $quantitiyToAdd;
 
         // Set the new cart status
         $newCartStatus = 'y';
 
-        // Update the quantity and cart status in the database
-        updateProductMeatDetails(get_db_connection(), $ProductMeatId, $newQuantity, $newCartStatus);
+        // Update the quantitiy and cart status in the database
+        updateProductMeatDetails(get_db_connection(), $ProductMeatId, $newquantitiy, $newCartStatus);
 
         // You can add more logic here, such as inserting into a cart table
         echo "Added to Cart successfully.";
