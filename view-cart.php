@@ -1,36 +1,23 @@
-<h1>Shopping Cart</h1>
-
-    <?php
-    function displayTable($data, $category)
-    {
-        if (empty($data)) {
-            echo "<p>Your $category cart is empty.</p>";
-        } else {
-            ?>
-            <h2><?php echo $category; ?></h2>
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th>Product Name</th>
-                        <th>Quantity</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php foreach ($data as $item): ?>
-                        <tr>
-                            <td><?php echo $item['ProductName']; ?></td>
-                            <td><?php echo $item['Quantity']; ?></td>
-                        </tr>
-                    <?php endforeach; ?>
-                </tbody>
-            </table>
+<h1>Cart Products</h1>
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
             <?php
-        }
-    }
-
-    displayTable($productBreadData, 'ProductBread');
-    displayTable($productProduceData, 'ProductProduce');
-    displayTable($productDrinkData, 'ProductDrink');
-    displayTable($productMeatData, 'ProductMeat');
-    displayTable($productSpiceData, 'ProductSpice');
-    ?>
+            while ($CartProduct = $CartProduct->fetch_assoc()) {
+            ?>
+                <tr>
+                    <td><?php echo $CartProduct['ProductName']; ?></td>
+                    <td><?php echo $CartProduct['ProductQuantity']; ?></td>
+                </tr>
+            <?php
+            }
+            ?>
+        </tbody>
+    </table>
+</div>
