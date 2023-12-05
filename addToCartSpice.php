@@ -4,7 +4,7 @@ include("util-db.php");
 // Function to fetch the current quantity and cart status of a ProductSpice
 function getProductSpiceDetails($conn, $ProductSpiceId)
 {
-    $fetchQuery = "SELECT ProductSpiceQuantity, ProductSpiceCart FROM ProductSpice WHERE ProductSpiceID = $ProductSpiceId";
+    $fetchQuery = "SELECT ProductSpicesQuantity, ProductSpiceCart FROM ProductSpice WHERE ProductSpiceID = $ProductSpiceId";
     $result = mysqli_query($conn, $fetchQuery);
 
     if (!$result) {
@@ -22,7 +22,7 @@ function getProductSpiceDetails($conn, $ProductSpiceId)
 // Function to update the quantity and cart status of a ProductSpice
 function updateProductSpiceDetails($conn, $ProductSpiceId, $newQuantity, $newCartStatus)
 {
-    $updateQuery = "UPDATE ProductSpice SET ProductSpiceQuantity = $newQuantity, ProductSpiceCart = '$newCartStatus' WHERE ProductSpiceID = $ProductSpiceId";
+    $updateQuery = "UPDATE ProductSpice SET ProductSpicesQuantity = $newQuantity, ProductSpiceCart = '$newCartStatus' WHERE ProductSpiceID = $ProductSpiceId";
     mysqli_query($conn, $updateQuery);
 }
 
@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ProductSpice'], $_POS
 
     if ($ProductSpiceDetails !== false) {
         // Calculate the new quantity
-        $newQuantity = $ProductSpiceDetails['ProductSpiceQuantity'] + $quantityToAdd;
+        $newQuantity = $ProductSpiceDetails['ProductSpicesQuantity'] + $quantityToAdd;
 
         // Set the new cart status
         $newCartStatus = 'y';
