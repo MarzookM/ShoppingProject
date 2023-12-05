@@ -3,20 +3,23 @@ $pageTitle = "Home";
 include "view-header.php";
 ?> 
 <style>
-      
+    body {
+        margin: 0;
+        overflow: hidden;
+        background-color: black;
+    }
 
-        video {
-            width: 100vw;
-            height: 120vh;
-            object-fit: cover;
-        }
-    </style>
+    video {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+    }
+</style>
 </head>
 <body>
     <!-- Embedding the video element -->
     <video id="welcomeVideo" controls autoplay loop>
         <source src="WelcomeVid.mp4" type="video/mp4">
-       
     </video>
 
     <!-- Include your JavaScript code -->
@@ -30,4 +33,4 @@ include "view-header.php";
     </script>
 <?php
 include "view-footer.php";
-?> 
+?>
