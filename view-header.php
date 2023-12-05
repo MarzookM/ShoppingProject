@@ -15,7 +15,7 @@
 
     .small-nav-bar {
       background-color: grey;
-      padding: 20px 0;
+      padding: 25px 0;
     }
 
     .big-nav-bar a,
