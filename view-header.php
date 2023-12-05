@@ -42,7 +42,7 @@
         </li>
           </li>  
           <li class="nav-item">
-          <a class="nav-link active" href="Cart.php">Cart</a>
+          <a class="nav-link active" href="cart.php">Cart</a>
         </li>
       </ul>
     </div>
