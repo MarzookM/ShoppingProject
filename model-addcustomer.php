@@ -11,11 +11,11 @@ function insertCustomer($customerName, $customerID, $customerPhoneNumber) {
         }
 
         $conn->close();
-
         return $success;
     } catch (Exception $e) {
         $conn->close();
         throw $e;
     }
 }
+
 ?>
