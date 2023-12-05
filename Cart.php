@@ -1,14 +1,15 @@
 <?php
+include("util-db.php");
+include("model-Cart.php");
 
-include("model-cart.php");
+// Get cart items for each product type
+$productTypes = ["ProductBread", "ProductProduce", "ProductDrink", "ProductMeat", "ProductSpice"];
+$cartItems = [];
 
-// Fetch cart items for each product type
-$breadCart = getCartItems("ProductBread");
-$spiceCart = getCartItems("ProductSpice");
-$drinkCart = getCartItems("ProductDrink");
-$meatCart = getCartItems("ProductMeat");
-$produceCart = getCartItems("ProductProduce");
+foreach ($productTypes as $productType) {
+    $cartItems[$productType] = getCartItems($productType);
+}
 
-// Include the view to display the cart
-include("view-cart.php");
+// Include the view file
+include("view-Cart.php");
 ?>
