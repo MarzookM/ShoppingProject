@@ -27,8 +27,8 @@ function updateProductSpiceDetails($conn, $ProductSpiceId, $newQuantity, $newCar
 }
 
 // Check if the request method is POST and required parameters are set
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ProductSpiceId'], $_POST['quantity'])) {
-    $ProductSpiceId = $_POST['ProductSpiceId'];
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ProductSpice'], $_POST['quantity'])) {
+    $ProductSpiceId = $_POST['ProductSpice'];
     $quantityToAdd = $_POST['quantity'];
 
     // Fetch the current quantity and cart status from the database
