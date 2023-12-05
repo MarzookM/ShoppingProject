@@ -33,7 +33,7 @@
   </style>
 </head>
 <body>
-  <div class="container">
+
     <!-- Big Nav Bar -->
     <div class="big-nav-bar">
       <span style="font-size: 36px; font-weight: bold;">MIS-MART</span>
@@ -54,7 +54,7 @@
       <!-- ... Your existing code ... -->
     </nav>
 
-  </div>
+
 
   <!-- Bootstrap JS and other scripts go here -->
 
