@@ -10,12 +10,25 @@
       background-color: darkblue;
       color: yellow;
       text-align: center;
-      padding: 10px 0;
+      padding: 15px 0;
     }
 
     .small-nav-bar {
       background-color: grey;
-      padding: 5px 0;
+      padding: 10px 0;
+    }
+
+    .big-nav-bar a,
+    .small-nav-bar a {
+      color: white;
+      text-decoration: none;
+      margin-right: 20px;
+      font-size: 18px;
+    }
+
+    .big-nav-bar a:hover,
+    .small-nav-bar a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -23,15 +36,15 @@
   <div class="container">
     <!-- Big Nav Bar -->
     <div class="big-nav-bar">
-      <span style="font-size: 24px; font-weight: bold;">MIS-MART</span>
-      <a href="cart.php" style="float: right; color: yellow; text-decoration: none; margin-right: 10px;">Cart</a>
+      <span style="font-size: 36px; font-weight: bold;">MIS-MART</span>
+      <a href="cart.php" style="float: right; font-size: 18px;">Cart</a>
     </div>
 
     <!-- Small Nav Bar -->
     <div class="small-nav-bar">
-      <a href="index.php" style="color: white; text-decoration: none; margin-right: 10px;">Home</a>
-      <a href="Product.php" style="color: white; text-decoration: none; margin-right: 10px;">Product</a>
-      <a href="about.php" style="color: white; text-decoration: none; margin-right: 10px;">About Us</a>
+      <a href="index.php">Home</a>
+      <a href="Product.php">Product</a>
+      <a href="about.php">About Us</a>
     </div>
 
     <!-- Rest of your content goes here -->
