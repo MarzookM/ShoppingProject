@@ -3,15 +3,11 @@ $pageTitle = "Home";
 include "view-header.php";
 ?> 
 <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-        background-color: black;
-        }
+      
 
         video {
             width: 100vw;
-            height: 100vh;
+            height: 120vh;
             object-fit: cover;
         }
     </style>
