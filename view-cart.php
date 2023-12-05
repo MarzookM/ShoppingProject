@@ -1,58 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View Cart</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .cart {
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-        }
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
-</head>
-<body>
 
-<div class="cart">
-    <h2>View Cart</h2>
+    <h1>Your Shopping Cart</h1>
 
-    <!-- Display Product Bread Cart -->
-    <h3>Product Bread</h3>
-    <table>
-        <tr>
-            <th>Name</th>
-            <th>Quantity</th>
-        </tr>
-        <?php
-        while ($row = mysqli_fetch_assoc($breadCart)) {
-            echo "<tr><td>{$row['ProductBreadName']}</td><td>{$row['ProductBreadQuantity']}</td></tr>";
+    <?php
+    foreach ($cartItems as $productType => $items) {
+        echo "<h2>$productType</h2>";
+
+        if (mysqli_num_rows($items) > 0) {
+            echo "<ul>";
+            while ($item = mysqli_fetch_assoc($items)) {
+                echo "<li>{$item["${productType}Name"]} - Quantity: {$item["${productType}Quantity"]}</li>";
+            }
+            echo "</ul>";
+        } else {
+            echo "<p>No items in your $productType cart.</p>";
         }
-        ?>
-    </table>
+    }
+    ?>
 
-    <!-- Add similar sections for other product types -->
 
-</div>
 
-</body>
-</html>
