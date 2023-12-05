@@ -15,33 +15,38 @@
 
         .small-nav-bar {
             background-color: grey;
-            padding: 10px 0; /* Adjusted padding */
+            padding: 25px 0;
             text-align: center;
         }
 
+        .big-nav-bar a,
         .small-nav-bar a {
-            display: inline-block;
-            margin: 0 10px; /* Adjusted margin to create space between icons */
-            text-align: center;
+            color: white;
             text-decoration: none;
-            position: relative;
-            padding: 10px; /* Added padding */
+            margin-right: 20px;
+            font-size: 18px;
+            transition: all 0.3s ease; /* Added hover animation */
+        }
+
+        .big-nav-bar a:hover,
+        .small-nav-bar a:hover {
+           
+            transform: scale(1.1); /* Added hover animation */
+        }
+
+        /* Adjusting size and hover animation for Cart in big nav bar */
+        .big-nav-bar a[href="cart.php"] {
+            font-size: 24px;
+        }
+
+        /* Centering and adding hover animation for icons in small nav bar */
+        .small-nav-bar a {
+            display: inline-block; /* Display icons next to each other */
+            margin: 0 10px; /* Added margin to create space between icons */
         }
 
         .small-nav-bar a:hover {
-            transform: scale(1.1);
-        }
-
-        .small-nav-bar a::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            border: 2px solid white; /* Added border around each icon */
-            border-radius: 8px; /* Added border radius for a rounded look */
-            box-sizing: border-box;
+            transform: scale(1.1); /* Added hover animation */
         }
     </style>
 </head>
