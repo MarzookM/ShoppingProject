@@ -1,32 +1,19 @@
 <?php
-
-
-function getCartData($table, $cartColumn, $quantityColumn)
-{
-    $conn = get_db_connection();
-
-    $query = "SELECT
-        $table.$tableName AS ProductName,
-        $table.$quantityColumn AS Quantity
-    FROM Store
-    JOIN $table ON Store.${table}ID = ${table}.${table}ID
-    WHERE $table.$cartColumn = 'y' AND $table.$quantityColumn > 0";
-
-    $result = mysqli_query($conn, $query);
-
-    if (!$result) {
-        die("Query failed: " . mysqli_error($conn));
+function selectProduct(){
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("SELECT `Product.ProductName`, `Product.ProductQuantity` FROM `Store` JOIN `Product` ON `Store.ProductID` = `Product.ProductID`
+WHERE `Product.ProductCart` = 'y' AND `Product.ProductQuantity` > 0 "); 
+        $stmt->execute();
+        $result = $stmt->get_result()
+        $conn->close();
+        return $result;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
     }
-
-    $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
-
-    mysqli_close($conn);
-
-    return $data;
 }
 
-$productBreadData = getCartData("ProductBread", "ProductBreadCart", "ProductBreadQuantity");
-$productProduceData = getCartData("ProductProduce", "ProductProduceCart", "ProductProduceQuantity");
-$productDrinkData = getCartData("ProductDrink", "ProductDrinkCart", "ProductDrinkQuantity");
-$productMeatData = getCartData("ProductMeat", "ProductMeatCart", "ProductMeatQuantity");
-$productSpiceData = getCartData("ProductSpice", "ProductSpiceCart", "ProductSpiceQuantity");
+
+
+?>
