@@ -23,13 +23,15 @@
         
        
         <li class="nav-item">
-          <a class="nav-link" href="Customer.php">Product</a>
+          <a class="nav-link" href="Customer.php">Customer</a>
         </li>
          
         <li class="nav-item">
           <a class="nav-link" href="Product.php">Product</a>
         </li>
-         
+           <li class="nav-item">
+          <a class="nav-link" href="about.php">About Us</a>
+        </li>
        
         
           
