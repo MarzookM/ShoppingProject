@@ -24,11 +24,23 @@
       text-decoration: none;
       margin-right: 20px;
       font-size: 18px;
+      transition: all 0.3s ease; /* Added hover animation */
     }
 
     .big-nav-bar a:hover,
     .small-nav-bar a:hover {
       text-decoration: underline;
+      transform: scale(1.1); /* Added hover animation */
+    }
+
+    /* Centering the cart icon in the small nav bar */
+    .small-nav-bar a[href="cart.php"] {
+      display: flex;
+      align-items: center;
+    }
+
+    .small-nav-bar a[href="cart.php"] img {
+      margin-right: 5px;
     }
   </style>
 </head>
@@ -37,7 +49,7 @@
     <!-- Big Nav Bar -->
     <div class="big-nav-bar">
       <span style="font-size: 50px; font-weight: bold;">MIS-MART</span>
-      <a href="cart.php" style="float: right; font-size: 18px;">Cart</a>
+      <a href="cart.php" style="float: right; font-size: 24px;">Cart</a>
     </div>
 
     <!-- Small Nav Bar -->
@@ -45,6 +57,7 @@
       <a href="index.php">Home</a>
       <a href="Product.php">Product</a>
       <a href="about.php">About Us</a>
+      <a href="cart.php"><img src="cart-icon.png" alt="Cart" style="width: 30px; height: 30px;"> Cart</a>
     </div>
 
     <!-- Rest of your content goes here -->
@@ -53,8 +66,6 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <!-- ... Your existing code ... -->
     </nav>
-
-
 
   <!-- Bootstrap JS and other scripts go here -->
 
