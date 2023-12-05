@@ -1,9 +1,9 @@
 <?php
 require_once("util-db.php");
-require_once("model-Product.php");
+require_once("model-ProductBread.php");
 $pageTitle = "Grains";
 include "view-header.php";
 $ProductBread = selectProductBread();
-include "view-Product.php";
+include "view-ProductBread.php";
 include "view-footer.php";
 ?>
