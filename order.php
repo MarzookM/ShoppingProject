@@ -25,10 +25,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     updateAllProducts(get_db_connection());
 
     // Add more logic if needed
-echo "Order Deleted";
+
 
 } else {
     // Invalid request
     echo "Invalid request.";
 }
+include("view-footer.php");
+include("view-cart.php");
 ?>
+
