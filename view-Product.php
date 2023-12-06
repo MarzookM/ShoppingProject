@@ -6,7 +6,7 @@
     <title>Product Page</title>
     <style>
         body {
-            background-color: #001f3f; /* Dark blue background */
+            background-color: light-blue; /* Dark blue background */
             color: #ffffff; /* White text */
         }
 
@@ -19,7 +19,8 @@
 
         .card {
             width: 300px;
-            background-color: #333; /* Dark gray background for cards */
+            background-color: black; /* Dark gray background for cards */
+            color: #ffffff;
             border-radius: 10px;
             overflow: hidden;
             transition: transform 0.3s, box-shadow 0.3s;
