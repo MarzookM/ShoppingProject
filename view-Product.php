@@ -6,8 +6,8 @@
     <title>Product Page</title>
     <style>
         body {
-            background-color: light-blue; /* Dark blue background */
-            color: #ffffff; /* White text */
+            background-color: blue; 
+
         }
 
         .card-container {
@@ -21,6 +21,7 @@
             width: 300px;
             background-color: black; /* Dark gray background for cards */
             color: #ffffff;
+            text-align: center;
             border-radius: 10px;
             overflow: hidden;
             transition: transform 0.3s, box-shadow 0.3s;
@@ -54,7 +55,7 @@
         }
 
         .add-to-cart-btn {
-            background-color: #28a745; /* Green color for the button */
+            background-color: #28a745; 
             color: #ffffff;
             border: none;
             padding: 8px 15px;
@@ -64,14 +65,11 @@
         }
 
         .add-to-cart-btn:hover {
-            background-color: #218838; /* Darker green on hover */
+            background-color: #218838; 
         }
     </style>
 </head>
 <body>
-
-    <h1>Products</h1>
-
     <div class="card-container">
         <?php
         while ($Products = $Product->fetch_assoc()) {
