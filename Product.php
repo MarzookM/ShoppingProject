@@ -1,4 +1,5 @@
 <?php
+//Shows all product
 require_once("util-db.php");
 require_once("model-Product.php");
 $pageTitle = "Customer";
