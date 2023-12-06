@@ -3,6 +3,13 @@ $pageTitle = "About Us";
 include "view-header.php";
 ?>
 
+<style>
+    .chart-container {
+        width: 300px; /* Adjust the width as needed */
+        margin: auto;
+    }
+</style>
+
 <div class="container mt-5">
     <h1 class="mb-4">Welcome to MIS Mart</h1>
 
@@ -16,12 +23,12 @@ include "view-header.php";
         <li><strong>Community:</strong> Building strong, supportive communities is at the heart of what we do.</li>
         <li><strong>Philanthropy:</strong> Giving back is not just a choice; it's a responsibility. We are dedicated to making a positive impact.</li>
         <li><strong>Quality:</strong> We are committed to offering products that meet the highest standards of quality and freshness.</li>
-
-        <!-- Place the canvas element for the chart here -->
-        <li>
-            <canvas id="myChart" width="200" height="100"></canvas>
-        </li>
     </ul>
+
+    <!-- Separate container for the chart -->
+    <div class="chart-container">
+        <canvas id="myChart" width="200" height="100"></canvas>
+    </div>
 
     <h2 class="mt-4">Our Philanthropic Initiatives</h2>
     <p>Through our "MIS Cares" program, we actively support local charities, food banks, and educational initiatives. We believe that a thriving community begins with access to basic necessities and educational opportunities. By shopping at MIS Mart, you become a part of this meaningful journey.</p>
