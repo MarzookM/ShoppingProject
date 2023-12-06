@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     updateAllProducts(get_db_connection());
 
     // Add more logic if needed
-include("view-Product.php");
+echo "Order Deleted";
 
 } else {
     // Invalid request
