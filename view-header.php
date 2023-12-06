@@ -12,7 +12,7 @@
             text-align: center;
             margin-left: 55px;
             padding: 30px 15px;
-            display: flex;
+           
         }
 
         .small-nav-bar {
