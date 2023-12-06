@@ -22,7 +22,8 @@
 
         .small-nav-bar {
             background-color: grey;
-            padding: 15px 0;
+            margin: 0;
+            padding: 0;
             text-align: center;
         }
 
