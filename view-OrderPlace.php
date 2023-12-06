@@ -38,9 +38,9 @@
 <div class="container">
     <h1>Thank you!</h1>
     <p>Your order has been placed successfully.</p>
-    <form action="order.php" method="POST">
+    <form action="Product.php" method="POST">
         <div class="order-button-container">
-            <button class="btn btn-success" onclick="location.href='Product.php'">Place Another Order</button>
+            <button class="btn btn-success" type="submit">Go to Products</button>
         </div>
     </form>
 </div>
