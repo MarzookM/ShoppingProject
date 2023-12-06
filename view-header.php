@@ -10,8 +10,8 @@
             background-color: darkblue;
             color: yellow;
             text-align: center;
-              margin-left: 50px;
-            padding: 50px 15px;
+              margin-left: 40px;
+            padding: 30px 15px;
         }
 
         .small-nav-bar {
