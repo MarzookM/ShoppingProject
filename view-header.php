@@ -17,7 +17,7 @@
         .small-nav-bar a {
             color: white;
             text-decoration: none;
-            margin-right: -10px;
+            margin-right: 20 px;
             font-size: 18px;
             transition: all 0.3s ease; /* Added hover animation */
         }
@@ -36,7 +36,7 @@
         /* Centering and adding hover animation for icons in small nav bar */
         .small-nav-bar a {
             display: inline-block; /* Display icons next to each other */
-            margin: 0 10px; /* Added margin to create space between icons */
+            margin: 0 20px; /* Added margin to create space between icons */
         }
 
         .small-nav-bar a:hover {
