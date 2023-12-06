@@ -31,7 +31,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Invalid request
     echo "Invalid request.";
 }
+
+include("view-OrderPlace.php");
 include("view-footer.php");
-include("view-cart.php");
+
 ?>
 
