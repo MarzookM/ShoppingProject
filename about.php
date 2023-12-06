@@ -95,7 +95,7 @@ include "view-header.php";
     new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ['MIS MART', 'WALMART', "COSTCO', 'SAM CLUB', 'ALDI'],
+            labels: ['MIS MART', 'WALMART', 'COSTCO', 'SAM CLUB', 'ALDI'],
             datasets: [{
                 label: '# of Numbers',
                 data: [80, 1, 14, 2, 1, 2],
