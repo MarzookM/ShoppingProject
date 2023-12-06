@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
         body {
-            background-color: #4CC9FO; 
+            background-color: #4CC9F0; 
 
         form {
             max-width: 400px;
