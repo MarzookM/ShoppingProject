@@ -1,7 +1,17 @@
-<div class="container mt-5">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    <!-- Add your CSS or Bootstrap CDN links here if needed -->
+</head>
+<body>
+
+<div class="container mt-5 text-center">
     <div class="row mb-3">
         <div class="col">
-            <h1 stype="text-align:center;">Add or Manage your Infomation</h1>
+            <h1 class="mb-4" style="text-decoration: underline;">Customer</h1>
         </div>
         <div class="col-auto">
             <?php include "view-Customer-newform.php"; ?>
@@ -51,3 +61,6 @@
         </div>
     </form>
 </div>
+
+</body>
+</html>
