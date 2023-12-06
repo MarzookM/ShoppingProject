@@ -17,7 +17,7 @@
         .small-nav-bar a {
             color: white;
             text-decoration: none;
-            margin-right: 15px;
+            margin-right: -10px;
             font-size: 18px;
             transition: all 0.3s ease; /* Added hover animation */
         }
