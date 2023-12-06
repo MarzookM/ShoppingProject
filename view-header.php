@@ -5,7 +5,6 @@
         .big-nav-bar {
             background-color: darkblue;
             color: yellow;
-            text-align: center;
             padding: 30px 0;
         }
         .small-nav-bar {
