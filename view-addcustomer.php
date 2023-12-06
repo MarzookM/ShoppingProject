@@ -38,7 +38,7 @@
                 <input type="text" class="form-control" id="customerName" name="customerName" required>
             </div>
             <div class="mb-3">
-                <label for="customerID" class="form-label">Customer ID</label>
+                <label for="customerID" class="form-label">Customer ID (Assume 1)</label>
                 <input type="text" class="form-control" id="customerID" name="customerID" required>
             </div>
             <div class="mb-3">
