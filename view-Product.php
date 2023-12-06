@@ -6,7 +6,7 @@
     <title>Product Page</title>
     <style>
         body {
-            background-color: grey; 
+            background-color: #FAF9F6; 
 
         }
 
@@ -19,8 +19,8 @@
 
         .card {
             width: 300px;
-            background-color: black; /* Dark gray background for cards */
-            color: #ffffff;
+            background-color: Grey; 
+            color: Black;
             text-align: center;
             border-radius: 10px;
             overflow: hidden;
@@ -55,8 +55,8 @@
         }
 
         .add-to-cart-btn {
-            background-color: white; 
-            color: black;
+            background-color: Green; 
+            color: white;
             border: none;
             padding: 8px 15px;
             border-radius: 5px;
