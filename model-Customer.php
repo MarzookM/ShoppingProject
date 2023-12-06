@@ -29,7 +29,7 @@ function updateCustomer($cNumber, $cDesc){
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("update `Customer` set `CustomerPhoneNumber` = ?, `CustomerName` =? where `CustomerID` = ?" ); 
-        $stmt->bind_param("ssi", $cNumber, $cDesc);
+        $stmt->bind_param($cNumber, $cDesc);
         $success = $stmt->execute();
         $conn->close();
         return $success;
