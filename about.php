@@ -70,7 +70,7 @@ include "view-header.php";
         <li><strong>Quality:</strong> We are committed to offering products that meet the highest standards of quality and freshness.</li>
     </ul>
 
-    <!-- Separate container for the chart -->
+    
     <div class="chart-container">
         <canvas id="myChart" width="200" height="100"></canvas>
     </div>
@@ -89,7 +89,7 @@ include "view-header.php";
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
-    // Now the chart container is present in the HTML
+    
     const ctx = document.getElementById('myChart');
 
     new Chart(ctx, {
