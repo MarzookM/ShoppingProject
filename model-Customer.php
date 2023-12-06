@@ -28,7 +28,7 @@ function insertCustomer($cNumber, $cDesc){
 function updateCustomer($cNumber, $cDesc){
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("update `Customer` set `CustomerPhoneNumber` = ?, `CustomerName` =?" ); 
+        $stmt = $conn->prepare("update `Customer` set `CustomerPhoneNumber` = ?, `CustomerName` =? VALUES (?,?)" ); 
         $stmt->bind_param("ssi", $cNumber, $cDesc;
         $success = $stmt->execute();
         $conn->close();
