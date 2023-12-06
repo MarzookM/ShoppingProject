@@ -50,10 +50,10 @@ include "view-header.php";
     new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ['1', '2', '3', '4', '5', '6'],
+            labels: ['MIS MART', 'WALMART', 'COSTCO', 'SAMSCLUB', 'ALDI'],
             datasets: [{
-                label: '# of Numbers',
-                data: [14, 20, 6, 7, 8, 1],
+                label: 'Greatest Shops OF ALL TIME',
+                data: [80, 1, 14, 1, 2, 3],
                 borderWidth: 1
             }]
         },
