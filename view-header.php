@@ -10,7 +10,7 @@
             background-color: darkblue;
             color: yellow;
             text-align: center;
-              margin-left: 40px;
+            margin-left: 55px;
             padding: 30px 15px;
         }
 
