@@ -2,7 +2,7 @@
 function selectCustomer(){
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT `CustomerID`, `CustomerName`, `CustomerPhoneNumber` FROM `Customer`  "); 
+        $stmt = $conn->prepare("SELECT `CustomerID`, `CustomerName`, `CustomerPhoneNumber` FROM `Customer`"); 
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
@@ -25,11 +25,11 @@ function insertCustomer($cNumber, $cDesc){
         throw $e;
     }
 }
-function updateCustomer($cNumber, $cDesc){
+function updateCustomer($cNumber, $cDesc, $cid){
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("update `Customer` set `CustomerPhoneNumber` = ?, `CustomerName` =? VALUES (?,?)" ); 
-        $stmt->bind_param("ssi", $cNumber, $cDesc);
+        $stmt = $conn->prepare("update `Customer` set `CustomerPhoneNumber` = ?, `CustomerName` =? where `CustomerID` = ?" ); 
+        $stmt->bind_param("ssi", $cNumber, $cDesc, $cid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -51,4 +51,6 @@ function deleteCustomer($cid){
         throw $e;
     }
 }
+
+
 ?>
