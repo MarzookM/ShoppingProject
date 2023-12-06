@@ -9,14 +9,20 @@
         .big-nav-bar {
             background-color: darkblue;
             color: yellow;
-            text-align: center;
-            padding: 30px 0;
+            text-align: right;
+            padding: 30px 15px;
         }
 
         .small-nav-bar {
             background-color: grey;
-            padding: 25px 0;
+            padding: 15px 0;
             text-align: center;
+        }
+
+        .big-nav-bar span {
+            font-size: 50px;
+            font-weight: bold;
+            margin-right: auto;
         }
 
         .big-nav-bar a,
@@ -30,34 +36,29 @@
 
         .big-nav-bar a:hover,
         .small-nav-bar a:hover {
-           
-            transform: scale(1.1); 
+            transform: scale(1.1);
         }
 
-       
         .big-nav-bar a[href="cart.php"] {
             font-size: 24px;
         }
 
-        
         .small-nav-bar a {
-            display: inline-block; 
-            margin: 0 10px; 
+            display: inline-block;
+            margin: 0 10px;
         }
 
         .small-nav-bar a:hover {
-            transform: scale(1.1); 
+            transform: scale(1.1);
         }
     </style>
 </head>
 <body>
 
-
 <div class="big-nav-bar">
-    <span style="font-size: 50px; font-weight: bold; left-margin: 15px;">MIS-MART</span>
-    <a href="cart.php" style="float: right;">Cart</a>
+    <span>MIS-MART</span>
+    <a href="cart.php">Cart</a>
 </div>
-
 
 <div class="small-nav-bar">
     <a href="index.php">Home</a>
@@ -65,11 +66,8 @@
     <a href="about.php">About Us</a>
 </div>
 
-
-
-
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  
+    <!-- Your navigation content goes here -->
 </nav>
 
 </body>
