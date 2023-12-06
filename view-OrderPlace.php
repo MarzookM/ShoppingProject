@@ -40,7 +40,7 @@
     <p>Your order has been placed successfully.</p>
     <form action="order.php" method="POST">
         <div class="order-button-container">
-            <button class="btn btn-success" onclick="location.href='order.php'">Place Another Order</button>
+            <button class="btn btn-success" onclick="location.href='Product.php'">Place Another Order</button>
         </div>
     </form>
 </div>
