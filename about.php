@@ -4,9 +4,54 @@ include "view-header.php";
 ?>
 
 <style>
+    body {
+        background-color: #f5f5f5;
+        color: #333;
+        font-family: 'Arial', sans-serif;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    h1, h2 {
+        color: #007bff;
+    }
+
+    p {
+        font-size: 1.1em;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+
     .chart-container {
-        width: 300px; /* Adjust the width as needed */
+        width: 300px;
         margin: auto;
+    }
+
+    #myChart {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 20px 0;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
     }
 </style>
 
@@ -50,10 +95,10 @@ include "view-header.php";
     new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ['MIS MART', 'WALMART', 'COSTCO', 'SAMSCLUB', 'ALDI'],
+            labels: ['1', '2', '3', '4', '5', '6'],
             datasets: [{
-                label: 'Greatest Shops OF ALL TIME',
-                data: [80, 1, 14, 1, 2, 3],
+                label: '# of Numbers',
+                data: [14, 20, 6, 7, 8, 1],
                 borderWidth: 1
             }]
         },
