@@ -25,9 +25,11 @@ include "view-header.php";
     <p>Together, we can build a better future. Join us in our mission to provide affordable groceries, support local communities, and make a positive impact on the world.</p>
 
     <p class="text-center mt-5">
-        <a href="shop.php" class="btn btn-primary btn-lg">Start Shopping</a>
+        <a href="Product.php" class="btn btn-primary btn-lg">Start Shopping</a>
     </p>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   
 
@@ -53,8 +55,6 @@ include "view-header.php";
     }
   });
 </script>
-</div>
-
 <?php
 include "view-footer.php";
 ?>
