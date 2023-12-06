@@ -58,7 +58,7 @@
         </tbody>
     </table>
 </div>
-<form action="Order.php" method="POST">
+<form action="order.php" method="POST">
 <div class="order-button-container">
     <button class="order-button" onclick="location.href='order.php'">Order</button>
 </form>
