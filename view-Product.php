@@ -6,7 +6,7 @@
     <title>Product Page</title>
     <style>
         body {
-            background-color: blue; 
+            background-color: #FFFFE0; 
 
         }
 
