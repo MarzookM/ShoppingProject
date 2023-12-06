@@ -19,54 +19,54 @@
             text-decoration: none;
             margin-right: 20px;
             font-size: 18px;
-            transition: all 0.3s ease; /* Added hover animation */
+            transition: all 0.3s ease; 
         }
 
         .big-nav-bar a:hover,
         .small-nav-bar a:hover {
 
-            transform: scale(1.1); /* Added hover animation */
+            transform: scale(1.1); 
         }
 
-        /* Adjusting size and hover animation for Cart in big nav bar */
+       
         .big-nav-bar a[href="cart.php"] {
             font-size: 24px;
         }
 
-        /* Centering and adding hover animation for icons in small nav bar */
+       
         .small-nav-bar a {
-            display: inline-block; /* Display icons next to each other */
-            margin: 0 70px; /* Added margin to create space between icons */
+            display: inline-block; 
+            margin: 0 70px; 
         }
 
         .small-nav-bar a:hover {
-            transform: scale(1.1); /* Added hover animation */
+            transform: scale(1.1); 
         }
     </style>
 </head>
 <body>
 
-<!-- Big Nav Bar -->
+
 <div class="big-nav-bar">
     <span style="font-size: 50px; font-weight: bold; left-margin: 15px;">MIS-MART</span>
     <a href="cart.php" style="float: right;">Cart</a>
 </div>
 
-<!-- Small Nav Bar -->
+
 <div class="small-nav-bar">
     <a href="index.php">Home</a>
     <a href="Product.php">Product</a>
     <a href="about.php">About Us</a>
 </div>
 
-<!-- Rest of your content goes here -->
 
-<!-- Your existing navigation code -->
+
+
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <!-- ... Your existing code ... -->
+ 
 </nav>
 
-<!-- Bootstrap JS and other scripts go here -->
+
 
 </body>
 </html>
