@@ -1,8 +1,9 @@
 <?php
 require_once("util-db.php");
-require_once("model-Customer.php");
-$pageTitle = "Customer";
+require_once("model-Customers.php"); // going to create 
+$pageTitle = "Customers";
 include "view-header.php";
+
 
 if (isset($_POST['actionType'])) {
   switch ($_POST['actionType']) {
@@ -14,7 +15,7 @@ if (isset($_POST['actionType'])) {
       }
       break;
     case "Edit":
-      if(updateCustomer($_POST['cDesc'], $_POST['cid'])){
+      if(updateCustomer($_POST['cNumber'], $_POST['cDesc'],$_POST['cid'])){
         echo '<div class="alert alert-success" role="alert">Customer edited.</div>';
       }else{
         echo '<div class="alert alert-danger" role="alert">Error.</div>';
@@ -30,8 +31,7 @@ if (isset($_POST['actionType'])) {
     
   }
 }
-
 $Customer = selectCustomer();
-include "view-Customer.php";
+include "view-Customer.php"; //going to create
 include "view-footer.php";
-?>
+?> 
