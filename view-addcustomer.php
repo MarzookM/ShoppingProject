@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
         body {
-            background-color: #474973; 
+            background-color: #4CC9FO; 
 
         form {
             max-width: 400px;
@@ -29,7 +29,7 @@
 <body>
 
     <div class="container">
-        <h1 class="mb-4">Add Customer</h1>
+        
 
        
         <form method="post" action="">
