@@ -6,6 +6,9 @@ include "view-header.php";
 <div class="container mt-5">
     <h1 class="mb-4">Welcome to MIS Mart</h1>
 
+    <!-- Add the canvas element for the chart -->
+    <canvas id="myChart" width="400" height="200"></canvas>
+
     <p class="lead">At MIS Mart, we take pride in providing high-quality groceries at affordable prices. Our mission is to make everyday essentials accessible to everyone, ensuring that you get the best value for your money.</p>
 
     <p>We understand the importance of community and giving back. As part of our commitment to philanthropy, MIS Mart actively supports local charities and initiatives. A percentage of every purchase you make goes towards community projects, helping us contribute to the well-being of those in need.</p>
@@ -27,34 +30,34 @@ include "view-header.php";
     <p class="text-center mt-5">
         <a href="Product.php" class="btn btn-primary btn-lg">Start Shopping</a>
     </p>
-   
 </div>
+
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-  
-
 <script>
+    // Now the chart container is present in the HTML
     const ctx = document.getElementById('myChart');
 
-  new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: ['1', '2', '3', '4', '5', '6'],
-      datasets: [{
-        label: '# of Numbers',
-        data: [14, 20, 6, 7, 8, 1],
-        borderWidth: 1
-      }]
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['1', '2', '3', '4', '5', '6'],
+            datasets: [{
+                label: '# of Numbers',
+                data: [14, 20, 6, 7, 8, 1],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
         }
-      }
-    }
-  });
+    });
 </script>
+
 <?php
 include "view-footer.php";
 ?>
