@@ -97,7 +97,7 @@ include "view-header.php";
         data: {
             labels: ['MIS MART', 'WALMART', 'COSTCO', 'SAM CLUB', 'ALDI'],
             datasets: [{
-                label: '# of Numbers',
+                label: 'Greatest Grocery Stores by Vote',
                 data: [80, 1, 14, 2, 1, 2],
                 borderWidth: 1
             }]
