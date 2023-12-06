@@ -1,6 +1,7 @@
 <?php
+//shows all the customers in the database and makes you edit it
 require_once("util-db.php");
-require_once("model-Customer.php"); // going to create 
+require_once("model-Customer.php"); 
 $pageTitle = "Customer";
 include "view-header.php";
 
@@ -32,6 +33,6 @@ if (isset($_POST['actionType'])) {
   }
 }
 $Customer = selectCustomer();
-include "view-Customer.php"; //going to create
+include "view-Customer.php"; 
 include "view-footer.php";
 ?> 
