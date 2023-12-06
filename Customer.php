@@ -1,7 +1,7 @@
 <?php
 require_once("util-db.php");
-require_once("model-Customers.php"); // going to create 
-$pageTitle = "Customers";
+require_once("model-Customer.php"); // going to create 
+$pageTitle = "Customer";
 include "view-header.php";
 
 
