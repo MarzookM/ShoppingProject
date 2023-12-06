@@ -6,9 +6,6 @@ include "view-header.php";
 <div class="container mt-5">
     <h1 class="mb-4">Welcome to MIS Mart</h1>
 
-    <!-- Add the canvas element for the chart -->
-    <canvas id="myChart" width="400" height="200"></canvas>
-
     <p class="lead">At MIS Mart, we take pride in providing high-quality groceries at affordable prices. Our mission is to make everyday essentials accessible to everyone, ensuring that you get the best value for your money.</p>
 
     <p>We understand the importance of community and giving back. As part of our commitment to philanthropy, MIS Mart actively supports local charities and initiatives. A percentage of every purchase you make goes towards community projects, helping us contribute to the well-being of those in need.</p>
@@ -19,6 +16,11 @@ include "view-header.php";
         <li><strong>Community:</strong> Building strong, supportive communities is at the heart of what we do.</li>
         <li><strong>Philanthropy:</strong> Giving back is not just a choice; it's a responsibility. We are dedicated to making a positive impact.</li>
         <li><strong>Quality:</strong> We are committed to offering products that meet the highest standards of quality and freshness.</li>
+
+        <!-- Place the canvas element for the chart here -->
+        <li>
+            <canvas id="myChart" width="200" height="100"></canvas>
+        </li>
     </ul>
 
     <h2 class="mt-4">Our Philanthropic Initiatives</h2>
