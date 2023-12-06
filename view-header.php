@@ -36,7 +36,7 @@
         /* Centering and adding hover animation for icons in small nav bar */
         .small-nav-bar a {
             display: inline-block; /* Display icons next to each other */
-            margin: 0 20px; /* Added margin to create space between icons */
+            margin: 0 40px; /* Added margin to create space between icons */
         }
 
         .small-nav-bar a:hover {
