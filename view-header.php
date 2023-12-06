@@ -12,7 +12,7 @@
             text-align: center;
             margin-left: 55px;
             padding: 30px 15px;
-           
+            width: 100%; /* Add this line to make it stretch fully */
         }
 
         .small-nav-bar {
