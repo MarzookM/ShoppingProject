@@ -4,13 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Customer</title>
-    <!-- Bootstrap CSS link -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
         body {
-            background-color: #87CEFA; /* Light blue background */
-        }
+            background-color: #474973; 
 
         form {
             max-width: 400px;
@@ -34,8 +31,7 @@
     <div class="container">
         <h1 class="mb-4">Add Customer</h1>
 
-        <!-- Your HTML form for adding a customer -->
-        <!-- Make sure to adjust the form structure based on your requirements -->
+       
         <form method="post" action="">
             <div class="mb-3">
                 <label for="customerName" class="form-label">Customer Name</label>
@@ -54,7 +50,7 @@
         </form>
     </div>
 
-    <!-- Bootstrap JS and jQuery scripts -->
+  
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
