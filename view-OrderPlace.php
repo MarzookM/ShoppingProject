@@ -40,7 +40,7 @@
     <p>Your order has been placed successfully.</p>
     <form action="Product.php" method="POST">
         <div class="order-button-container">
-            <button class="btn btn-success" type="submit">Go to Products</button>
+            <button class="btn btn-success" type="submit">Place another order</button>
         </div>
     </form>
 </div>
