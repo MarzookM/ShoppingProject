@@ -23,6 +23,7 @@
             font-size: 50px;
             font-weight: bold;
             margin-right: auto;
+            display: inline-block;
         }
 
         .big-nav-bar a,
@@ -32,6 +33,10 @@
             margin-right: 20px;
             font-size: 18px;
             transition: all 0.3s ease;
+        }
+
+        .big-nav-bar a.cart-icon {
+            float: right;
         }
 
         .big-nav-bar a:hover,
@@ -57,7 +62,7 @@
 
 <div class="big-nav-bar">
     <span>MIS-MART</span>
-    <a href="cart.php">Cart</a>
+    <a href="cart.php" class="cart-icon">Cart</a>
 </div>
 
 <div class="small-nav-bar">
