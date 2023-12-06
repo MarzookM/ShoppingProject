@@ -27,6 +27,32 @@ include "view-header.php";
     <p class="text-center mt-5">
         <a href="shop.php" class="btn btn-primary btn-lg">Start Shopping</a>
     </p>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  
+
+<script>
+    const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['1', '2', '3', '4', '5', '6'],
+      datasets: [{
+        label: '# of Numbers',
+        data: [14, 20, 6, 7, 8, 1],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
 </div>
 
 <?php
