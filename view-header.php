@@ -9,7 +9,7 @@
         .big-nav-bar {
             background-color: darkblue;
             color: yellow;
-            text-align: right;
+            text-align: center;
             padding: 30px 15px;
         }
 
