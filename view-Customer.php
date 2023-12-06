@@ -1,7 +1,7 @@
 <div class="container mt-5">
     <div class="row mb-3">
         <div class="col">
-            <h1>Customer</h1>
+            <h1 stype="text-align:center;">Add or Manage your Infomation</h1>
         </div>
         <div class="col-auto">
             <?php include "view-Customer-newform.php"; ?>
